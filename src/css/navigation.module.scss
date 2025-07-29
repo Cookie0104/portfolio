@@ -1,0 +1,207 @@
+$primary-color: #577eb5;
+$secondary-color: #4b4943;
+$hover-color: #3a639c;
+$background-color: #ededed;
+
+$primary-font-size: 18px;
+$content-font-size: 16px;
+$small-font-size: 14px;
+
+.header {
+  background: $background-color;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.08);
+}
+
+.navigationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0px 24px;
+  color: $secondary-color;
+  font-size: $content-font-size;
+  width: 80%;
+  max-width: 1150px;
+  margin: 0px auto;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 40px;
+    color: $secondary-color;
+    font-size: $content-font-size;
+    width: calc(100% - 80px);
+    letter-spacing: 0.1em;
+  }
+}
+@media (max-width: 799px) {
+  .navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 24px;
+    color: $secondary-color;
+    font-size: $content-font-size;
+    width: calc(100% - 48px);
+    letter-spacing: 0.1em;
+  }
+}
+
+div:has(> .homeLinkArea) {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.homeLinkArea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  color: $secondary-color;
+  width: 200px;
+
+  .name {
+    line-height: 20px;
+    font-size: $primary-font-size;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+  width: fit-content;
+
+  a {
+    color: $primary-color;
+    position: relative;
+    text-decoration: none;
+    height: fit-content;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+    font-size: $content-font-size;
+
+    &.active {
+      color: $primary-color;
+      font-weight: 600;
+
+      &::after {
+        content: " ";
+        width: 100%;
+        height: 2px;
+        background: $primary-color;
+        position: absolute;
+        bottom: -4px;
+        left: 0px;
+      }
+
+      &:hover {
+        color: $primary-color;
+        cursor: pointer;
+
+        &::after {
+          content: " ";
+          width: 100%;
+          height: 2px;
+          background: $primary-color;
+          position: absolute;
+          bottom: -4px;
+          left: 0px;
+
+          transform: translate(0px, 0px);
+          animation: unset;
+        }
+      }
+    }
+
+    &:hover {
+      color: $hover-color;
+      cursor: pointer;
+
+      &::after {
+        content: " ";
+        width: 100%;
+        height: 2px;
+        background: $hover-color;
+        position: absolute;
+        bottom: -4px;
+        left: 0px;
+
+        transform: translate(0px, 50px);
+        animation: 1s ease show;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 1);
+  }
+
+  100% {
+    opacity: 100;
+    transform: scale(1, 1);
+  }
+}
+
+.buttonArea {
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  align-items: center;
+}
+
+.secondMenu {
+  margin: 0px auto;
+  font-size: $primary-font-size;
+  border-bottom: 0.5px solid $primary-color;
+  display: flex;
+  justify-content: center;
+
+  a.active {
+    &::after {
+      bottom: -12px;
+      height: 3px;
+    }
+
+    &:hover {
+      &::after {
+        bottom: -12px;
+        height: 3px;
+      }
+    }
+  }
+  a:hover {
+    &::after {
+      bottom: -12px;
+      height: 3px;
+    }
+  }
+}
+
+.languageBtnAndListOuter {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}

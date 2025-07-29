@@ -1,0 +1,259 @@
+$primary-color: #577eb5;
+$secondary-color: #4b4943;
+$hover-color: #3a639c;
+$background-color: #ededed;
+$white: #fafafa;
+
+$primary-font-size: 18px;
+$content-font-size: 16px;
+$small-font-size: 14px;
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap8 {
+  gap: 8px;
+}
+
+.column {
+  flex-direction: column;
+  padding: 16px 0px;
+}
+
+.innerPageOuter {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 24px;
+  margin-bottom: 100px;
+}
+
+.backToHome {
+  position: sticky;
+  top: 68px;
+  width: 100%;
+  background: $background-color;
+}
+
+.backToHome button {
+  margin-top: 20px;
+  margin-left: calc(10vw - 16px);
+}
+
+.projectTitleFixed {
+  font-size: 26px;
+  line-height: 40px;
+  padding-top: 16px;
+  font-weight: 600;
+  color: $secondary-color;
+  padding-left: 20px;
+  position: sticky;
+  top: 124px;
+  background: $background-color;
+  padding-bottom: 16px;
+}
+
+.contentArea {
+  display: flex;
+  gap: 48px;
+  font-size: $content-font-size;
+  color: $secondary-color;
+  line-height: 30px;
+
+  .smallTitle {
+    font-weight: 600;
+    color: $primary-color;
+    font-size: $primary-font-size;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+  }
+
+  .leftArea {
+    min-width: 250px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+
+    .projectTitle {
+      font-size: 26px;
+      line-height: 40px;
+      padding-top: 16px;
+      font-weight: 600;
+      color: $secondary-color;
+    }
+    .roleOuter {
+      padding: 8px 0px;
+      .role {
+        border: 1px solid $secondary-color;
+        width: fit-content;
+        padding: 0px 8px;
+        color: $secondary-color;
+        border-radius: 4px;
+      }
+    }
+
+    .toolOuter {
+      display: flex;
+      gap: 8px 16px;
+    }
+  }
+
+  .rightArea {
+    width: 60%;
+    flex-grow: 1;
+
+    .mapOuter {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 24px;
+
+      h3 {
+        color: $primary-color;
+        font-size: $primary-font-size;
+        letter-spacing: 0.1em;
+        line-height: 40px;
+        margin: 0px;
+      }
+      h4 {
+        color: $secondary-color;
+        font-size: $content-font-size;
+        letter-spacing: 0.1em;
+        line-height: 40px;
+        margin: 0px;
+      }
+
+      .highlight {
+        background-color: #577eb525;
+        padding: 12px 32px 24px;
+        border-radius: 8px;
+
+        h3 {
+          color: $primary-color;
+          font-size: $primary-font-size;
+          letter-spacing: 0.1em;
+          line-height: 40px;
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .innerPageOuter {
+    width: calc(100% - 80px);
+    padding: 0px 40px;
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+  .contentArea {
+    gap: 32px;
+  }
+  .backToHome button {
+    margin-top: 20px;
+    margin-left: 26px;
+  }
+}
+@media (min-width: 500px) and (max-width: 799px) {
+  .innerPageOuter {
+    width: calc(100% - 48px);
+    padding: 0px 24px;
+    padding-top: 24px;
+    margin-bottom: 40px;
+  }
+  .contentArea {
+    gap: 32px;
+    flex-direction: column;
+
+    .leftArea {
+      width: 100%;
+
+      position: unset;
+      align-self: flex-start;
+
+      .projectTitle {
+        position: sticky;
+        top: 120px;
+      }
+    }
+
+    .rightArea {
+      width: 100%;
+    }
+  }
+  .backToHome {
+    position: sticky;
+    top: 101px;
+    background: $background-color;
+    width: 100%;
+    display: block;
+    padding-top: 12px;
+  }
+  .backToHome button {
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 499px) {
+  .innerPageOuter {
+    width: calc(100% - 48px);
+    padding: 0px 24px;
+    padding-top: 24px;
+    margin-bottom: 40px;
+  }
+  .contentArea {
+    gap: 32px;
+    flex-direction: column;
+
+    .leftArea {
+      width: 100%;
+
+      position: unset;
+      align-self: flex-start;
+
+      .projectTitle {
+        position: sticky;
+        top: 120px;
+      }
+    }
+
+    .rightArea {
+      width: 100%;
+    }
+  }
+  .backToHome {
+    position: sticky;
+    top: 60px;
+    background: $background-color;
+    width: 100%;
+    display: block;
+    padding-top: 12px;
+  }
+  .backToHome button {
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  .projectTitleFixed {
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 16px;
+    font-weight: 600;
+    color: $secondary-color;
+    padding-left: 20px;
+    position: sticky;
+    top: 94px;
+    background: $background-color;
+    padding-bottom: 16px;
+  }
+}

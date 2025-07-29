@@ -1,0 +1,114 @@
+$primary-color: #577eb5;
+$secondary-color: #4b4943;
+$hover-color: #3a639c;
+$background-color: #ededed;
+$white: #fafafa;
+
+$primary-font-size: 20px;
+$content-font-size: 16px;
+$small-font-size: 14px;
+
+.contactOuter {
+  // background: $white;
+  padding-bottom: 80px;
+  padding-top: 40px;
+  .contantInner {
+    width: 80%;
+    max-width: calc(1000px - 80px);
+    margin: 0px auto;
+  }
+  @media (min-width: 800px) and (max-width: 1200px) {
+    .contantInner {
+      width: calc(100% - 80px);
+      padding: 0px 40px;
+    }
+  }
+
+  @media (max-width: 799px) {
+    .contantInner {
+      width: calc(100% - 48px);
+      padding: 0px 24px;
+    }
+  }
+
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.formOuter {
+  width: calc(60% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-right: 40px;
+  // border-right: 0.5px solid $secondary-color;
+}
+
+.title {
+  width: 100%;
+  color: #a9a9a9;
+  font-size: $primary-font-size;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  padding-bottom: 16px;
+}
+
+.pictureOuter {
+  // background: $secondary-color;
+  width: calc(40% - 0px);
+  height: fit-content;
+  // padding-left: 40px;
+
+  img{
+      width: 100%;
+      display: block;
+    }
+}
+
+.flexBox {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .contantInner {
+    width: calc(100% - 80px);
+    padding: 0px 40px;
+  }
+}
+
+@media (max-width: 799px) {
+  .flexBox {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    width: 100%;
+    height: fit-content;
+  }
+  .formOuter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-right: 0px;
+    border-right: unset;
+  }
+  .pictureOuter {
+    // background: $secondary-color;
+    width: 100%;
+    height: fit-content;
+    padding-left: 0px;
+
+    img{
+      width: 60%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+$primary-color: #577eb5;
+$secondary-color: #4b4943;
+$hover-color: #3a639c;
+$background-color: #ededed;
+$white: #fafafa;
+
+$primary-font-size: 20px;
+$content-font-size: 16px;
+$small-font-size: 14px;
+
+
+//button
+
+.button {
+  letter-spacing: 0.05em;
+  border: 0px;
+  outline: 0px;
+  border-radius: 20px;
+  padding: 0px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  img {
+    height: 65%;
+  }
+}
+
+.button:disabled{
+  background: #a9a9a9;
+  &:hover{
+    background: #a9a9a9;
+  }
+}
+
+.icon-left {
+  padding-left: 10px;
+}
+
+.icon-right {
+  padding-right: 10px;
+}
+
+.primary {
+  background: $primary-color;
+  color: $white;
+
+  &:hover {
+    background: $hover-color;
+  }
+}
+
+.secondary {
+  outline: 1px solid $secondary-color;
+
+  &:hover {
+    background: $white;
+  }
+}
+
+.withoutOutline {
+  outline: 0px;
+  border: 0px;
+  color: #9d9d9d;
+  font-size: $small-font-size;
+
+  &:hover {
+    color: $secondary-color;
+    background: none;
+  }
+}
+
+.medium {
+  height: 40px;
+  line-height: 40px;
+  font-size: $content-font-size;
+  font-weight: 600;
+}
+
+.small {
+  height: 32px;
+  line-height: 32px;
+  font-size: $small-font-size;
+}
+
+//input
+
+input {
+  background: $white;
+  border: 1px solid rgba(137, 147, 133, 0.5);
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 8px 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  width: 100%;
+  height: 40px;
+  color: $secondary-color;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: 1px solid $primary-color;
+    height: 40px;
+  }
+
+  &::placeholder {
+    color: rgba(137, 147, 133, 0.8);
+    font-size: $small-font-size;
+  }
+}
+
+//textarea
+
+textarea {
+  background: $white;
+  border: 1px solid rgba(137, 147, 133, 0.5);
+  border-radius: 8px;
+  font-size: $content-font-size;
+  padding: 8px 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  width: 100%;
+  min-height: 100px;
+  flex-grow: 1;
+  color: $secondary-color;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: 1px solid $primary-color;
+    height: 40px;
+  }
+
+  &::placeholder {
+    color: rgba(137, 147, 133, 0.8);
+    font-size: $small-font-size;
+  }
+}

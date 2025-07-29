@@ -1,0 +1,43 @@
+$primary-color: #577eb5;
+$secondary-color: #4b4943;
+$hover-color: #3a639c;
+$background-color: #ededed;
+$white: #fafafa;
+
+$primary-font-size: 20px;
+$content-font-size: 16px;
+$small-font-size: 14px;
+
+.footerOuter{
+    width: 100%;
+    border-top: 0.5px solid $primary-color;
+    height: fit-content;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 24px;
+    letter-spacing: 0.1em;
+}
+
+a{
+    height: fit-content;
+    width: fit-content;
+
+    img{
+        display: block;
+    }
+}
+
+.linkOuter{
+  display: flex;
+  gap: 8px;
+}
+
+.copyright{
+    color: $secondary-color;
+    width: fit-content;
+    font-size: $small-font-size;
+}
+

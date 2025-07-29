@@ -1,0 +1,157 @@
+$primary-color: #577eb5;
+$secondary-color: #4b4943;
+$hover-color: #3a639c;
+$background-color: #ededed;
+
+$primary-font-size: 20px;
+$content-font-size: 16px;
+$small-font-size: 14px;
+
+.aboutOuterPhone{
+  height: calc(100vh - 60px);
+  width: 100%;
+  position: relative;
+
+  span {
+    position: absolute;
+    bottom: 78px;
+    left: calc(50% - 12px );
+    width: 24px;
+    height: 24px;
+    border-left: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    -webkit-animation: sdb06 1.5s infinite;
+    animation: sdb06 1.5s infinite;
+    box-sizing: border-box;
+  }
+
+  .draggableouter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.aboutOuter {
+  height: calc(70vh - 60px);
+  width: 100%;
+  min-height: 500px;
+  padding-top: 10vh;
+  position: relative;
+
+  span {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 12px );
+    width: 24px;
+    height: 24px;
+    border-left: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    -webkit-animation: sdb06 1.5s infinite;
+    animation: sdb06 1.5s infinite;
+    box-sizing: border-box;
+  }
+
+  .draggableouter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .open {
+    width: fit-content;
+    max-width: 550px;
+    color: $primary-color;
+    margin: 0px auto;
+    text-align: center;
+    font-size: $primary-font-size;
+    padding-bottom: 24px;
+    position: relative;
+
+    &::before {
+      content: " ";
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: $primary-color;
+      border-radius: 6px;
+      margin-right: 8px;
+      position: absolute;
+      top: calc(50% - 18px);
+      left: -24px;
+
+      animation: 2.5s ease breath;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .about {
+    width: 60%;
+    max-width: 550px;
+    height: fit-content;
+    color: $secondary-color;
+    font-size: 28px;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1.5px dashed $secondary-color;
+  }
+}
+
+@keyframes sdb06 {
+  0% {
+    transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+.buttonArea {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+div:has(> .line) {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  .line {
+    width: 2px;
+    height: 12px;
+    background: $secondary-color;
+
+    &:nth-child(1) {
+      transform: rotate(-16deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(16deg);
+    }
+  }
+}
+
+@keyframes breath {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
