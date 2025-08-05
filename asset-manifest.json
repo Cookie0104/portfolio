@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.fe49f083.css",
-    "main.js": "/portfolio/static/js/main.f1001ec5.js",
+    "main.js": "/portfolio/static/js/main.2fba621f.js",
     "static/js/453.ad7768ec.chunk.js": "/portfolio/static/js/453.ad7768ec.chunk.js",
     "static/media/hr4.mp4": "/portfolio/static/media/hr4.079c0ff63e3496fd46c0.mp4",
     "static/media/螢幕錄影 2025-04-12 下午12.40.44.mov": "/portfolio/static/media/螢幕錄影 2025-04-12 下午12.40.44.5ac27e05720999776c58.mov",
@@ -50,11 +50,11 @@
     "static/media/ic-dropdown.svg": "/portfolio/static/media/ic-dropdown.1fb5ede7837fab8cdb103f1cdd8d26ab.svg",
     "static/media/click.svg": "/portfolio/static/media/click.d1ef7b00e8d9646af69a.svg",
     "main.fe49f083.css.map": "/portfolio/static/css/main.fe49f083.css.map",
-    "main.f1001ec5.js.map": "/portfolio/static/js/main.f1001ec5.js.map",
+    "main.2fba621f.js.map": "/portfolio/static/js/main.2fba621f.js.map",
     "453.ad7768ec.chunk.js.map": "/portfolio/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe49f083.css",
-    "static/js/main.f1001ec5.js"
+    "static/js/main.2fba621f.js"
   ]
 }
